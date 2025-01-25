@@ -17,8 +17,8 @@ public class SpawnObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawn = difficulty; // Time.deltaTime;
-        //difficulty = Time.deltaTime * 4f;
+        spawn += difficulty *  Time.deltaTime;
+        difficulty = Time.deltaTime * 400f;
         while (spawn > 0)
         {
             spawn -= 1;
